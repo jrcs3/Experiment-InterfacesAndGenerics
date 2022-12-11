@@ -4,23 +4,30 @@ namespace InterfacesAndGenerics.models
 {
     public class FirstParent : IParent
     {
+        private string _name;
+        private bool _isOk;
+        List<FirstChild> _children;
         public FirstParent(string name, List<FirstChild> children = null, bool isOk = true)
         {
-            Name = name;
-            Children = children;
-            IsOk = isOk;
+            _name = name;
+            _children = children;
+            _isOk = isOk;
         }
-        public string Name { get; set; }
 
-        public List<FirstChild> Children { get; set; }
+        //public List<FirstChild> Children { get; set; }
+        IEnumerable<IChild> IParent.Children => _children;
 
-        public bool IsOk { get; private set; }
+        #region IParent Implementation Explicitly
+        string IParent.Name { get => _name; }
 
-        public int ChildCount { get => Children.Count; }
+        bool IParent.IsOk { get => _isOk; }
 
-        public IChild GetChildAt(int index)
+        int IParent.ChildCount { get => _children.Count; }
+
+        IChild IParent.GetChildAt(int index)
         {
-            return Children[index];
+            return _children[index];
         }
+        #endregion IParent Implementation Explicitly
     }
 }

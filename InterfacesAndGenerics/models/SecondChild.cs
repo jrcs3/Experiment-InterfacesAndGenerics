@@ -8,8 +8,10 @@
             IsOk = isOk;
         }
 
+        #region IChild Implementation Implicitly
         public string Name { get; set; }
         public bool IsOk { get; set; }
+        #endregion IChild Implementation Implicitly
 
         public string SecondChildName { get => $"2nd-Child-{Name}"; }
     }

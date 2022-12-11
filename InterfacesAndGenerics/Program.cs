@@ -19,10 +19,17 @@ namespace InterfacesAndGenerics
 
             for (int i = 0; i < parents.Count; i++)
             {
-                if (!parents[i].IsOk)
+                IParent parent = parents[i];
+                Console.Write($"{parent.Name}-{parent.IsOk}: ");
+                foreach (var c in parent.Children)
                 {
-                    IParent parent = parents[i];
-                    for (int j = 0; j < parents[i].ChildCount; j++)
+                    Console.Write($"{c.Name}-{c.IsOk}, ");
+                }
+                Console.WriteLine();
+
+                if (!parent.IsOk)
+                {
+                    for (int j = 0; j < parent.ChildCount; j++)
                     {
                         IChild child = parent.GetChildAt(j);
                         if (!child.IsOk)
