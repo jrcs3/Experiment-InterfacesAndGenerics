@@ -43,12 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="models\FirstChild.cs" />
-    <Compile Include="models\FirstParent.cs" />
+    <Compile Include="models\ExplicitChild.cs" />
+    <Compile Include="models\ExplicitParent.cs" />
     <Compile Include="models\IChild.cs" />
     <Compile Include="models\IParent.cs" />
-    <Compile Include="models\SecondChild.cs" />
-    <Compile Include="models\SecondParent.cs" />
+    <Compile Include="models\ImplicitChild.cs" />
+    <Compile Include="models\ImplicitParent.cs" />
+    <Compile Include="models\MixedParent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

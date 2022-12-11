@@ -1,8 +1,8 @@
 ﻿namespace InterfacesAndGenerics.models
 {
-    public class SecondChild : IChild
+    public class ImplicitChild : IChild
     {
-        public SecondChild(string name = "", bool isOk = true)
+        public ImplicitChild(string name = "", bool isOk = true)
         {
             Name = name;
             IsOk = isOk;

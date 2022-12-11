@@ -1,16 +1,16 @@
 ﻿namespace InterfacesAndGenerics.models
 {
-    public class FirstChild: IChild
+    public class ExplicitChild: IChild
     {
         private string _name;
         private bool _isOk;
-        public FirstChild(string name = "", bool isOk = true)
+        public ExplicitChild(string name = "", bool isOk = true)
         {
             _name = name;
             _isOk = isOk;
         }
 
-        public string FirstChildName { get => $"1st-Child-{_name}"; }
+        public string ExplicitChildName { get => $"1st-Child-{_name}"; }
 
         #region IChild Implementation Explicitly
         string IChild.Name { get => _name; }

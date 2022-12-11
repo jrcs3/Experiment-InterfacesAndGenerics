@@ -2,12 +2,12 @@
 
 namespace InterfacesAndGenerics.models
 {
-    public class FirstParent : IParent
+    public class ExplicitParent : IParent
     {
         private string _name;
         private bool _isOk;
-        List<FirstChild> _children;
-        public FirstParent(string name, List<FirstChild> children = null, bool isOk = true)
+        List<ExplicitChild> _children;
+        public ExplicitParent(string name, List<ExplicitChild> children = null, bool isOk = true)
         {
             _name = name;
             _children = children;

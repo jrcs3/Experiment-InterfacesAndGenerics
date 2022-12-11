@@ -2,16 +2,16 @@
 
 namespace InterfacesAndGenerics.models
 {
-    public class SecondParent : IParent
+    public class ImplicitParent : IParent
     {
-        public SecondParent(string name, List<SecondChild> children = null, bool isOk = true)
+        public ImplicitParent(string name, List<ImplicitChild> children = null, bool isOk = true)
         {
             Name = name;
             Children = children;
             IsOk = isOk;
         }
 
-        public List<SecondChild> Children { get; set; }
+        public List<ImplicitChild> Children { get; set; }
 
         #region IParent Implementation Implicitly
         public string Name { get; set; }
