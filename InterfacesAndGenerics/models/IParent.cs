@@ -8,7 +8,6 @@ namespace InterfacesAndGenerics.models
         bool IsOk { get; }
         IChild GetChildAt(int index);
         int ChildCount { get; }
-
         IEnumerable<IChild> Children { get; }
     }
 }

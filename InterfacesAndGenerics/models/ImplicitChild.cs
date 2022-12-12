@@ -13,6 +13,6 @@
         public bool IsOk { get; set; }
         #endregion IChild Implementation Implicitly
 
-        public string SecondChildName { get => $"2nd-Child-{Name}"; }
+        public string ImplicitChildName { get => $"2nd-Child-{Name}"; }
     }
 }
